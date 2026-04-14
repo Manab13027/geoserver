@@ -1,0 +1,18 @@
+# GeoServer data directory (large, environment-specific)
+data/
+
+# Secrets & credentials
+.env
+.env.*
+credentials.json
+secrets.json
+*.key
+*.pem
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Logs
+*.log
+logs/
