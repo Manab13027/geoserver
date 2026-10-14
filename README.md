@@ -1,29 +1,20 @@
-# Geoserver
+# GeoServer (deployment)
 
-_TODO: one line on what this project does and who it's for._
+This folder is a **GeoServer web application + data directory**. GeoServer is an
+open-source server for publishing and sharing geospatial data (maps, layers)
+over standard OGC web services (WMS/WFS/WCS). The root `index.html` simply
+redirects to the admin console at `web/`.
 
-**Stack:** Static web
+## Contents
+- `WEB-INF/`, `META-INF/` — the packaged GeoServer Java web app
+- `data/` — the GeoServer data directory (workspaces, layers, styles, config)
+- `index.html` — redirect to the admin UI
 
-## Getting started
-
-```bash
-# open index.html in a browser
-```
-
-## Project structure
-
-```
-META-INF/
-WEB-INF/
-data/
-index.html
-push_to_github.sh
-```
+## Running
+Deploy the web app in a servlet container (e.g. Tomcat/Jetty), or run a
+standalone GeoServer pointed at this `data/` directory, then open the admin
+console (default `http://localhost:8080/geoserver/web/`).
 
 ## Notes
-
-_TODO: anything a new user should know — configuration, env vars, known limitations._
-
----
-
-_README scaffolded by readme_gen. Edit the TODOs to finish it._
+- This is a GeoServer instance/data dir, not custom application code.
+- See the official GeoServer docs for configuration and service endpoints.
